@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Dearschool</title>
+
+    <style>
+        *{
+            text-decoration: none;
+        }
+    </style>
+
 </head>
 <body>
 <div id="app">

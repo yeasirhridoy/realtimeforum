@@ -20,7 +20,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->slug = Str::slug($request->name);
         $category->save();
-        return response('Created',Response::HTTP_CREATED);
+        return response($category,Response::HTTP_CREATED);
     }
 
     public function show(Category $category)
@@ -31,6 +31,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $category->update(['name'=>$request->name,'slug'=>Str::slug($request->name)]);
+        return \response($category);
     }
 
     public function destroy(Category $category)
